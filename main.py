@@ -59,13 +59,13 @@ class Blockchain(object):
     def new_user(self):
         new = random.randrange(00000000000000000000000000000, 90000000000000000000000000000)
         return new
-#make a random user numer
+#Make a random user numer
 blockchain = Blockchain()
 value1 = db["user1"]
 value2 = db["user2"]
 value3 = db["user3"]
 value4 = db["user4"]
-#Store new user number here 
+#Store new user number 
 t1 = blockchain.new_transaction(value1, value2, '5')
 t2 = blockchain.new_transaction(value2 , value1, '1')
 t3 = blockchain.new_transaction(value3, value4, '5')
