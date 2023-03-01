@@ -1,7 +1,6 @@
 import hashlib
 import json
 import random
-import other
 from time import time
 from replit import db
 
@@ -60,21 +59,14 @@ class Blockchain(object):
     def new_user(self):
         new = random.randrange(00000000000000000000000000000, 90000000000000000000000000000)
         return new
-#Make a random user numer
-blockchain = Blockchain()
-value1 = db["user1"]
-value2 = db["user2"]
-value3 = db["user3"]
-value4 = db["user4"]
-#Store new user number 
-t1 = blockchain.new_transaction(value1, value2, '5')
-t2 = blockchain.new_transaction(value2 , value1, '1')
-t3 = blockchain.new_transaction(value3, value4, '5')
-blockchain.new_block(random.randrange(12345, 90000))
-
-other.moobar()
-print(blockchain.chain)
-
-
-
-
+def moobar():
+  value1 = db["user1"]
+  value2 = db["user2"]
+  value3 = db["user3"]
+  value4 = db["user4"]
+  blockchain = Blockchain()
+  t4 = blockchain.new_transaction(value1, value4, '1')
+  t5 = blockchain.new_transaction(value3, value2, '0.5')
+  t6 = blockchain.new_transaction(value2, value1, '0.5')
+  blockchain.new_block((random.randrange(12345, 90000)))
+  print(blockchain.chain)
